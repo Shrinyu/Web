@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:sans-serif, arial;
+        }
+        .Title-Nav{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0px 180px 0px 120px;
+        }
+        .company-name{
+            font-size: 32px;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: rgb(67, 48, 48);
+        }
+        .nav-group{
+            display: flex;
+            flex-direction: row;
+            column-gap: 40px;
+        }
+        .nav-items{
+            font-weight: lighter;
+            color:rgba(67, 48, 48, 0.756) ;
+            letter-spacing: 2px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .granite-cover{
+            width: 100%;
+            height: 750px;  
+            background-image: url(https://c.pxhere.com/photos/bb/c2/ground_soil_land_yellow_background_sucface_texture_wall-815769.jpg!d);
+        }
+        .granite-cover-text{
+            font-size: 80px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            transform: translatey(320px);
+        }
+        .granite-cover>img{
+            width: 100%;
+            height: 750px;
+            
+        }
+        .whowr{
+            width: 100%;
+            height: 750px;
+            background-color:#353231f1 ;
+        }
+        .whowr-content{
+            width: 52%;
+            margin: 0% auto;
+            padding: 140px 0px 140px 0px;
+            display: flex;
+            flex-direction:column;
+            row-gap: 64px;
+            text-align: center;
+        }
+        .whowr-line{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 16px;
+        }
+        .line{
+            width: 75px;
+            height: 1.6px;
+            background-color: White;
+        }
+        .whowr-text{
+            font-weight:600;
+            font-size: 12px;
+            color: white;
+        }
+        .whowr-head{
+            font-size: 40px;
+            font-weight: bolder;
+            color: rgba(201, 170, 93);
+        }
+        .whowr-body{
+            font-size: 20px;
+            font-weight: 100;
+            color: rgb(206, 205, 205);
+        }
+        .whowr-link{
+            font-weight: 700;
+            font-size: 18px;
+            color: rgb(225, 224, 224);
+        }
+        .granite-list{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            column-gap: 8px;
+            row-gap: 12px;
+            padding:0px 220px 0px 220px ;
+        }
+        .granite-item {
+            /* position: relative; */
+            width: 275px;
+            height: 275px;
+            overflow: hidden;
+        }
+        .granite-item>img {
+            width: 100%;
+            height: 100%;
+            /* transition: transform 0.3s ease; */
+        }
+        .granite-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }   
+        .granite-item:hover img {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+            background-color:rgba(201, 170, 93, 0.7) ;
+        }
+        
+        
+        .granite-lines-pic{
+            width: 100%;
+            height: 700px;
+            background-image: url(https://media.istockphoto.com/id/183816125/photo/construction-material.jpg?s=612x612&w=0&k=20&c=YPHDNLY9CcHMBh_xjO9XVXHxnjJNEQu0Y8TibBxrSzw=);
+            background-size: cover;
+        }
+        .whatwo{
+            padding-bottom: 180px;
+        }
+        .whowr-content1{
+            width: 51%;
+            margin: 0% auto;
+            padding: 140px 0px 50px 0px;
+            display: flex;
+            flex-direction:column;
+            row-gap: 64px;
+            text-align: center;
+        }
+        .g1:hover{
+            background-color:rgba(201, 170, 93) ;
+        }
+        .features{
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 100px 200px 100px 200px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 100px;
+            text-align: center;
+        }
+        .grid-features{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 120px;
+            row-gap: 100px;
+            text-align: center;
+        }
+        .g-pic{
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+        .g-pic>img{
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            margin-left: 400px;
+        }
+        .feature-head{
+            color: rgb(67, 48, 48);
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .feature-body{
+            font-weight: lighter;
+            color:rgba(67, 48, 48, 0.756) ;
+        }
+        .g-box{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .list2-pic{
+            display: flex;
+            flex-direction: row;
+            column-gap: 8px;
+        }
+        .list2-pic>img{
+            width: 500px;
+            height: 300px;
+        }
+        .people-list{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 120px;
+        }
+        .people-list-items{
+            display: flex;
+            flex-direction: column;
+            column-gap: 120px;
+            row-gap: 24px;
+            text-align: center;
+        }
+        .people-list-items>img{
+            width: 270px;
+            height: 270px;
+            margin-left: 20px;
+        }
+        .form-alignment{
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="web-page">
+        <div class="Title-Nav">
+            <div class="company-name">
+                FORMATION
+            </div>
+            <div class="nav-group">
+                <div><a href="#who-we-are" class="nav-items">WHO WE ARE</a></div>
+                <div><a href="#what-we-offer" class="nav-items">WHAT WE OFFER</a></div>
+                <div><a href="#who-we-serve" class="nav-items">WHO WE SERVE</a></div>
+                <div><a href="#contact-us" class="nav-items">CONTACT</a></div>
+            </div>
+        </div>
+
+        <div class="granite-cover">
+            <div class="granite-cover-text">WE UNEARTH DESIGN</div>
+        </div>
+
+        <div  id="who-we-are" class="whowr">
+            <div class="whowr-content">
+                <div class="whowr-line">
+                    <span class="line"></span>
+                    <span class="whowr-text">WHO WE ARE</span>
+                    <span class="line"></span>
+                </div>
+                <div class="whowr-head">
+                    OUR PASSION FOR EXOTIC STONE AND SURFACES RUNS DEEP
+                </div>
+                <div class="whowr-body">
+                    The design of your next stone or tile project is already well underway. It’s a process that began millions of years ago, miles beneath the surface of the earth. We take over where nature leaves off, importing the finest natural stone and porcelain tile from around the globe and continuing its millennia-long process of formation. Like the origins of the products we offer, our passion for architecture and design runs deep.
+                </div>
+                <div>
+                    <a href="#contact-us" class="whowr-link">Unearth your next design today.Contact us.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="what-we-offer" class="whatwo">
+            <div class="whowr-content1">
+                <div class="whowr-line">
+                    <span class="line" style="background-color:rgb(67, 48, 48) ;"></span>
+                    <span class="whowr-text" style="color: rgb(67, 48, 48)">WHAT WE OFFER</span>
+                    <span class="line" style="background-color:rgb(67, 48, 48) ;"></span>
+                </div>
+                <div class="whowr-head">
+                    OUR PRODUCTS
+                </div>
+                <div class="whowr-body" style="color:rgba(67, 48, 48, 0.756)  ;">
+                    Contemporary, rustic, elegant, or whimsical—whatever your artistic vision may be, we have the medium to bring it to life. We carry only the finest natural stone and tile lines, each with a character all its own.
+                </div>
+            </div>
+            <div class="granite-list">
+                <div class="granite-item">
+                    <img src="https://formationstone.com/wp-content/uploads/thumbs_AJ-BROWN.jpeg" alt="granite">
+                    <div class="granite-text">GRANITE</div>
+                </div>
+                <div class="granite-item">
+                    <img src="https://formationstone.com/wp-content/uploads/thumbs_GREY-ORIBICO.jpeg" alt="granite">
+                    <div class="granite-text">MARBLE</div>
+                </div>
+                <div class="granite-item">
+                    <img src="https://formationstone.com/wp-content/uploads/thumbs_QUARTZITE-CIELO-LEATHER.jpg" alt="granite">
+                    <div class="granite-text">NATURAL STONE</div>
+                </div>
+                <div class="granite-item">
+                    <img src="https://formationstone.com/wp-content/uploads/thumbs_Coastal-Grey.jpg" alt="granite">
+                    <div class="granite-text">CEASARSTONE</div>
+                </div>
+                <div class="granite-item">
+                    <img src="https://formationstone.com/wp-content/uploads/thumbs_SILVER-ONYX.jpg" alt="granite">
+                    <div class="granite-text">LIMESTONE</div>
+                </div>
+                <div class="granite-item">
+                    <img src="https://formationstone.com/wp-content/uploads/thumbs_Iron-Grey-new.jpg" alt="granite">
+                    <div class="granite-text">SAPIENSTONE</div>
+                </div>
+                <div class="granite-item">
+                    <img src="https://formationstone.com/wp-content/uploads/thumbs_Bistro-Green.jpg" alt="granite">
+                    <div class="granite-text">VETRAZZO</div>
+                </div>
+                <div class="granite-item">
+                    <img src="https://formationstone.com/wp-content/uploads/thumbs_Ken-Mason-Tile.jpg" alt="granite">
+                    <div class="granite-text">TILES & MOSAICS</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="granite-lines-pic">
+            <div class="granite-cover-text" style="font-size: 40px; font-weight:bolder;transform: translateY(250px);">THE GRIT OF A SLAB YARD, THE FINERIES OF A SHOWROOM</div>
+        </div>
+
+        <div class="features">
+            <div class="grid-features">
+                <div class="g-box">
+                    <div class="g-pic">
+                        <img src="https://formationstone.com/wp-content/uploads/icon-setting.svg" alt="Setting">
+                    </div>
+                    <span class="feature-head">Unique Setting</span>
+                    <div class="feature-body">In addition to a sprawling slab yard stocked with the finest natural stone, we offer a unique retail setting in which to consult with our specialists about your design and architecture needs.</div>
+                </div>
+                <div class="g-box">
+                    <div  class="g-pic">
+                        <img src="https://formationstone.com/wp-content/uploads/icon-inventory.svg" alt="Setting">
+                    </div>
+                    <span class="feature-head" >Unrivaled Inventory</span>
+                    <div class="feature-body">Drawing on over 40 years of relationships with quarries around the world, we import exotic and specialty natural stone from the hills of Brazil, Turkey, Italy, France, and more.</div>
+                </div>
+                <div class="g-box">
+                    <div  class="g-pic">
+                        <img src="https://formationstone.com/wp-content/uploads/icon-team.png" alt="Setting">
+                    </div>
+                    <span class="feature-head">An Expert Team</span>
+                    <div class="feature-body">The Formation team prides itself on being experts in our trade. Our highly skilled staff knows everything about natural stone and surfaces, and is eager to assist with your design.</div>
+                </div>
+                <div class="g-box">
+                    <div  class="g-pic">
+                        <img src="https://formationstone.com/wp-content/uploads/icon-service.svg" alt="Setting">
+                    </div>
+                    <span class="feature-head">A History of Service</span>
+                    <div class="feature-body">We’ve been serving California and Oregon for over four decades. Our loyal clientele is like family—a family we hope you’ll join! If we don’t have the product you need, we will find it.</div>
+                </div>
+            </div>
+            <div>
+                <a href="#contact-us" class="whowr-link" style="color:rgba(201, 170, 93);">Visit us today to see for yourself!</a>
+            </div>
+        </div>
+        
+        <div class="list2-pic">
+            <img src="https://formationstone.com/wp-content/uploads/formationslab-location-v1.jpg" alt="">
+            <img src="https://formationstone.com/wp-content/uploads/formationslab-showroom-v2-1.jpg" alt="">
+            <img src="https://formationstone.com/wp-content/uploads/formationslab-location-v3.jpg" alt="">
+        </div>
+
+        <div  id="what-we-offer" class="whowr" style="height:1100px;">
+            <div class="whowr-content" style="width: 59%;">
+                <div class="whowr-line">
+                    <span class="line"></span>
+                    <span class="whowr-text">WHO WE ARE</span>
+                    <span class="line"></span>
+                </div>
+                <div class="whowr-head" style="color:rgb(206, 205, 205) ;">
+                    DISCOVERING DESIGN IN EVERY CORNER OF THE GLOBE
+                </div>
+                <div class="whowr-body">
+                    Formation offers over 1,000 different natural stone and tile products from locations around the world.
+                </div>
+                <div >
+                    <img style="background-color:#353231f1 ;width: 100%;height: 400px;" src="https://www.virtuacoin.com/assests/img/map.png" alt="">
+                </div>
+                <div>
+                    <a href="#contact-us" class="whowr-link">Bring a world of design to your next project. Contact us today.</a>
+                </div>
+            </div>
+        </div>
+
+        <div  id="who-we-serve" class="whowr" style="background-color: rgb(221, 221, 221); height: 1000px;">
+            <div class="whowr-content" style="width: 59%; padding:140px 0px 70px 0px ;">
+                <div class="whowr-line">
+                    <span class="line" style="background-color:rgb(67, 48, 48) ;"></span>
+                    <span class="whowr-text" style="color:#353231e4 ;">WHO WE SERVE</span>
+                    <span class="line" style="background-color:rgb(67, 48, 48) ;"></span>
+                </div>
+                <div class="whowr-head" >
+                    WE MEET THE UNIQUE NEEDS OF UNIQUE CUSTOMERS
+                </div>
+            </div>
+            <div class="people-list-container" style="display: flex; flex-direction: column; row-gap: 64px; text-align: center;">
+                <div class="people-list" style="padding: 0px 120px 0px 120px;">
+                    <div class="people-list-items">
+                        <img src="https://formationstone.com/wp-content/uploads/serve-photo-designers.png" alt="">
+                        <span class="feature-head">Designer & Architects</span>
+                        <div class="feature-body">Looking to impress your client with a jaw-dropping material? Our selection of exotic natural stone and tile never disappoints.</div>
+                    </div>
+                    
+                    <div class="people-list-items">
+                        <img src="https://formationstone.com/wp-content/uploads/serve-photo-homeowners.png" alt="">
+                        <span class="feature-head">Homeowners</span>
+                        <div class="feature-body">Having trouble finding a stunning natural stone or surface that’s still in your price range? Let our experts show you how.</div>
+                    </div>
+                    <div class="people-list-items">
+                        <img src="https://formationstone.com/wp-content/uploads/serve-photo-contractors.png" alt="">
+                        <span class="feature-head">Home Builder & Contractors</span>
+                        <div class="feature-body">Staying on budget and on time is easy with access to the best selection of natural stone and tile in the region.</div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#contact-us" class="whowr-link" style="color:#353231e4 ;">Whatever your project demands, we can help. Contact us today.</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-us" class="whatwo">
+            <div class="whowr-content1" style="width: 58%;">
+                <div class="whowr-line">
+                    <span class="line" style="background-color:rgb(67, 48, 48) ;"></span>
+                    <span class="whowr-text" style="color: rgb(67, 48, 48)">CONTACT US</span>
+                    <span class="line" style="background-color:rgb(67, 48, 48) ;"></span>
+                </div>
+                <div class="whowr-head">
+                    READY TO START YOUR NEXT PROJECT?
+                    CONTACT US TODAY
+                </div>
+                <div class="whowr-body" style="color:rgba(67, 48, 48, 0.756);  text-align:center;">
+                    Contemporary, rustic, elegant, or whimsical—whatever your artistic vision may be, we have the medium to bring it to life. We carry only the finest natural stone and tile lines, each with a character all its own.
+                </div>
+            </div>
+            <div>
+                <form action="" style="display: flex;flex-direction: column;row-gap: 24px;margin-left: 200px;margin-right: 200px;">
+                    <div class="form-alignment">
+                        <label for="">Your Name (Required)</label>
+                        <div style="display: flex;flex-direction: row;column-gap: 32px;">
+                            <div class="form-alignment" style="width: 100%;">
+                                <span style="font-size: small;color: grey;">First</span>
+                                <div >
+                                    <input type="text" style="border:none;stroke: bottom;width: 100%;">
+                                    <div class="form-line" style="width: 100%;height: 1px;background-color: black;"></div>
+                                </div>
+                            </div>
+                            <div class="form-alignment" style="width: 100%;">
+                                <span style="font-size: small;color: grey;">Last</span>
+                                <div >
+                                    <input type="text" style="border:none;stroke: bottom; width: 100%;">
+                                    <div class="form-line" style="width: 100%;height: 1px;background-color: black;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-alignment" >
+                        <label for="">Your Email (Required)</label>
+                        <div style="display: flex;flex-direction: column;">
+                            <input type="text" style="border:none;stroke: bottom;">
+                            <div class="form-line" style="width: 100%;height: 1px;background-color: black;"></div>
+                        </div>
+                    </div>
+                    <div class="form-alignment" >
+                        <label for="">Subject</label>
+                        <div style="display: flex;flex-direction: column;">
+                            <input type="text" style="border:none;stroke: bottom;">
+                            <div class="form-line" style="width: 100%;height: 0.5px;background-color: black;"></div>
+                        </div>
+                    </div>
+                    <div class="form-alignment" >
+                        <label for="">Your Message</label>
+                        <div style="display: flex;flex-direction: column;">
+                            <textarea name="" id="" style="border:none;stroke: bottom;"></textarea>
+                            <div class="form-line" style="width: 100%;height: 1px;background-color: black;"></div>
+                        </div>
+                    </div>
+                    <span>
+                        <button style="width: 150px;height: 50px;color: white;font-weight:bolder; background-color:rgba(201, 170, 93) ;border: none;letter-spacing: 1PX;">SUBMIT</button>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
